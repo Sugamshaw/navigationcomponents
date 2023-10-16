@@ -21,14 +21,22 @@
         android:id="@+id/loginFragment"
         android:name="com.sugam.navigationcomponents.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+        tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_welcomeFragment"
             app:destination="@id/welcomeFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
+            app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="username"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true"/>
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="sugam.com/login/{username}" />
     </fragment>
     <fragment
         android:id="@+id/welcomeFragment"

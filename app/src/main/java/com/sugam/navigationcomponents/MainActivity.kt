@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         toolbar = findViewById(R.id.toolbar)
         nav_view=findViewById(R.id.nav_view)
         drawer_layout=findViewById(R.id.drawer_layout)
+        bottom_nav=findViewById(R.id.bottom_nav)
 
 
         val navHostFragment =
@@ -45,7 +46,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         setupActionBarWithNavController(navController,appBarConfiguration)
 
-        bottom_nav=findViewById(R.id.bottom_nav)
+
 
         bottom_nav.setupWithNavController(navController)
 
